@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="startTime()">
+<script>
+//    var date=new Date();
+//    document.write(date);
+//    document.write(date.getFullYear());
+//    document.write(date.getTime());
+//    document.write(date.setFullYear(2010,10,23));
+//    document.write(date);
+    function startTime(){
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s =today.getSeconds();
+        h=checkTime(h);
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById("timetxt").innerHTML=h+":"+m+":"+s;
+        t=setTimeout(function(){
+            startTime();
+        },1000);
+    }
+    function checkTime(i){
+
+        if(i<10){
+            i="0"+ i.toString();
+        }
+        return i;
+    }
+</script>
+<div id="timetxt">
+
+</div>
+</body>
+</html>

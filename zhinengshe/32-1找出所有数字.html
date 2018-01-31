@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+var str='1234 sdf  88 sdf689k 34 fgh33';
+var tmp='';
+var arr=[];
+for(var i=0;i<str.length;i++){
+    if(str.charAt(i)>='0' && str.charAt(i)<='9'){
+        tmp+=str.charAt(i);
+    }else {
+        if(tmp){
+            arr.push(tmp);
+            tmp='';
+        }
+    }
+}
+if(tmp){
+    arr.push(tmp);
+    tmp='';
+}
+alert(str.match(/\d+/g));  //把数字列出
+</script>
+</head>
+<body>
+
+</body>
+</html>

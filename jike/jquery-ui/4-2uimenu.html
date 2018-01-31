@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <style>
+        .ui-menu:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+        .ui-menu .ui-menu-item{display:inline-block;float:left;margin:0;padding:10px;width:auto;}
+    </style>
+    <script>
+        $("document").ready(function(){
+
+//            $("#menu").menu({icons: {submenu: "ui-icon-circle-triangle-e" }});
+            $("#menu").menu({position:{at:"left bottom"}});
+//            $("#menu").menu({position:{at:"right bottom"},classes:{"ui-menu": "highlight"}})
+        })
+    </script>
+</head>
+<body>
+<ul id="menu">
+    <li>
+        <a href="#">java</a>
+        <ul>
+            <li><a href="#">txt1</a> </li>
+            <li><a href="#">txt2</a> </li>
+            <li><a href="#">txt3</a> </li>
+        </ul>
+    </li>
+    <li>C++</li>
+    <li>php</li>
+    <li>python</li>
+</ul>
+</body>
+</html>

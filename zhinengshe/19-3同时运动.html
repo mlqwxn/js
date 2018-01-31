@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    #div1{width:100px;height:100px;background:red;opacity:1;}
+</style>
+<script src="js/move2.js"></script>
+<script>
+window.onload=function(){
+    var oDiv=document.getElementById('div1');
+
+    oDiv.onmouseover=function(){
+        startMove(oDiv,{width:101,height:300,opacity:30})
+    };
+}
+</script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

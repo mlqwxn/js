@@ -1,0 +1,12 @@
+$(document).ready(function(){
+    $("body").text("等待。。。");
+    $("body").load("5-2box.html",function(a,status,c){
+        console.log(status);
+        if(status=="error"){
+            $("body").text("加载失败");
+        }
+    });
+    $.getScript("5-2hellojs.js").complete(function(){
+        sayHello();
+    });
+});

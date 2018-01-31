@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+window.onload=function(){
+    var oUl1=document.getElementById('ul1');
+    var oLi=oUl1.getElementsByTagName('li');
+//    for(var i=0;i<oLi.length;i++){
+//        oLi[0].style.background='red'
+//    }
+//    for(var i=0;i<oUl1.childNodes.length;i++){
+//        if (oUl1.childNodes[i].nodeType==1){
+//            oUl1.childNodes[i].style.background='blue';
+//        }
+//    }
+//    for(var i=0;i<oUl1.children.length;i++){
+//        oUl1.children[i].style.background='blue';
+//    }
+    var aA=document.getElementsByTagName('a');
+    for(var i=0;i<aA.length;i++){
+        aA[i].onclick= function () {
+        this.parentNode.style.display='none';
+
+        }
+    }
+
+
+}
+</script>
+</head>
+<body>
+<div>
+    <ul id="ul1">
+        <li><a href="javascript:;">  隐藏</a> </li>
+        <li><a href="javascript:;">  隐藏</a> </li>
+        <li><a href="javascript:;">  隐藏</a> </li>
+        <li><a href="javascript:;">  隐藏</a> </li>
+    </ul>
+</div>
+
+</body>
+</html>

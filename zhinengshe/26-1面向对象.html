@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+function createPerson(name,qq){
+    var obj=new Object();
+    obj.name=name;
+    obj.qq=qq;
+    obj.showName=function(){
+        alert('我的名称是'+this.name);
+    };
+    obj.showQQ=function(){
+        alert("q我的QQ号："+this.qq);
+    };
+    return obj;
+}
+var obj=createPerson('blue','123423');
+var obj2=createPerson('black','345634');
+obj.showName();
+obj2.showQQ();
+</script>
+</head>
+<body>
+
+</body>
+</html>

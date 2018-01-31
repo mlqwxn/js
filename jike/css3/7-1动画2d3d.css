@@ -1,0 +1,9 @@
+div{width:100px;height:100px;background-color: gray;}
+/*.div2{transform: translate(100px,100px);-webkit-transform: translate(100px,100px);}*/
+
+/*.div2{transform:rotate(180deg);-webkit-transform: rotate(180deg);}*/
+/*.div2{margin-top:200px;transform:scale(1,2);-webkit-transform: scale(1,2);}*/
+/*.div2{margin-left:20px;margin-top:200px;transform:skew(50deg,0deg);-webkit-transform: skew(20deg,50deg);}*/
+/*.div2{margin-left:20px;margin-top:200px;transform:matrix(50deg,0deg);-webkit-transform: matrix(1,0,0,1,80,100);}*/
+.div2{
+    margin-left:50px;margin-top: 200px;transform:rotateX(100deg);-webkit-transform: rotateY(50deg)}

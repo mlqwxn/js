@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <script rel="stylesheet" src="jquery-2.2.4.min.js"></script>
+    <script rel="stylesheet" src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<ul data-role="listview">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+</ul>
+<ol data-role="listview">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+</ol>
+
+<ul data-role="listview">
+    <li><a href="#">A</a> </li>
+    <li><a href="#">B</a></li>
+    <li><a href="#">C</a></li>
+    <li><a href="#">D</a></li>
+</ul>
+<hr>
+<ul data-role="listview" data-filter="true" data-inset="true">
+    <li><a href="#">A</a> </li>
+    <li><a href="#">B</a></li>
+    <li><a href="#">C</a></li>
+    <li><a href="#">D</a></li>
+</ul>
+<br>
+
+<form class="ui-filterable">
+    <input id="autoinput" data-type="search">
+</form>
+<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#autoinput" data-inset="true">
+    <li><a href="#">A</a> </li>
+    <li><a href="#">B</a></li>
+    <li><a href="#">C</a></li>
+    <li><a href="#">D</a></li>
+    <li><a href="#">E</a></li>
+    <li><a href="#">C</a></li>
+</ul>
+<br>
+<ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+    <li><a href="#">A</a> </li>
+    <li><a href="#">B</a></li>
+    <li><a href="#">Cloud</a></li>
+    <li><a href="#">C</a></li>
+    <li><a href="#">D</a></li>
+    <li><a href="#">E</a></li>
+</ul>
+<br>
+<br>
+</body>
+</html>

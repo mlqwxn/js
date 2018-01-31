@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    .cla1 {width:400px;height:400px;background:greenyellow;opacity:0.3;}
+    .cla2 {width:200px;height:200px;background:red;opacity:0.3;}
+</style>
+<script src="js/move.js"></script>
+<script>
+window.onload=function(){
+    var oCla1=document.getElementsByClassName('cla1')[0];
+    var oCla2=document.getElementsByClassName('cla2')[0];
+    oCla1.onmouseover=function(){
+        alert('sdf');
+        startMove(oCla2,'opacity',100);
+    }
+}
+</script>
+</head>
+
+<body>
+<div class="cla1">
+    <div class="cla2"></div>
+</div>
+
+</body>
+</html>

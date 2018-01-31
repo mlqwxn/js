@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #parent{width:600px;height:20px;background:#ccc;position:relative;margin:0 auto;}
+        #div1{width:20px;height:20px;background:red;position:absolute;left:0;top:0;}
+        #div2{width:400px;height:300px;background:gray;border:1px solid black;
+            overflow: hidden;position:relative;}
+        #div3{position:absolute;left:0;top:0;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var oDiv2=document.getElementById('div2');
+            var oDiv3=document.getElementById('div3');
+            var oParent=document.getElementById('parent');
+            var oTxt=document.getElementById('txt1');
+            var disX=0;
+            var disY=0;
+            oDiv.onmousedown=function(ev){
+                var oEvent=ev||event;
+
+                disX=oEvent.clientX-oDiv.offsetLeft;
+                disY=oEvent.clientY-oDiv.offsetTop;
+
+
+
+                document.onmousemove=function(ev){
+                    var oEvent=ev||event;
+                    var l=oEvent.clientX-disX;
+                    var t=oEvent.clientY-disY;
+
+                    if(l<0){
+                        l=0;
+                    }else if(l>oParent.offsetWidth-oDiv.offsetWidth){
+                        l=oParent.offsetWidth-oDiv.offsetWidth;
+                    }
+                    oDiv.style.left=l+'px';
+
+                    var scale=l/(oParent.offsetWidth-oDiv.offsetWidth);
+                    oTxt.value=scale;
+
+                    oDiv3.style.top=-scale*(oDiv3.offsetHeight-oDiv2.offsetHeight)+'px';
+
+                };
+                document.onmouseup=function(){
+
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                }
+
+            };
+
+        }
+    </script>
+</head>
+<body>
+<input id="txt1" type="text" />
+<div id="parent">
+    <div id="div1"></div>
+</div>
+<div id="div2">
+    <div id="div3">
+        党员队伍建设党员发展党员教育党员管理党员服务党员风采进入
+        潍坊市潍城区传承红色基因 实施提升潍县战役党性教育基地工程
+        今年以来，潍坊市潍城区大力实施潍县战役党性教育基地提升工程，提高现场教学的承载力、现场感和时代性，教育党员干部铭记光辉历史，传承红色基因，激发干事热情。[详情]
+        单县县委常委、组织部长与2017年新发展党员集体谈话并上党课
+        东营市垦利区打造党建图书馆党性教育主阵地
+        诸城市委市直机关工委系统“党员进党校”全员培训班开班
+        济宁市住房和城乡建设局“十九大”春风化雨 “微党课”浸润心灵
+        枣庄市薛城区实施“三大工程”促党员干部强筋骨提能力
+        乳山市：远程上公交 服务“在路上”
+        胶州市委党校：创设“三个课堂”推进“两学一做”学习教育常态化制度化
+        禹城市搭建远教可视系统助力基层组织建设
+        干部工作干部选拔任用干部教育培训干部管理监督干部考核评价任前公示招考录用进入
+        莱芜市抓实市管领导干部党的十九大精神专题培训工作
+        为学懂弄通做实十九大精神，11月27日至12月15日，莱芜市市管领导干部党的十九大精神专题学习班在这里如期举办。专题辅导、分组学习、分组讨论、认真自学……莱芜市市管领导干部、镇（街道）党...[详情]
+        青岛市李沧区“三个三”工作法提高干部教育培训的针对性和实效性
+        高青县举办全县年轻干部培训班
+        武城县：将党校打造成干部教育培训的战斗堡垒
+        邹城市出台新规 加强干部政德教育培训质量管理
+        东明县举办全县科级干部学习贯彻党的十九大精神专题培训班
+        兰陵县对900余名科级干部进行十九大精神专题培训
+        寿光市“四式”教学法提升干部培训质量干部工作干部选拔任用干部教育培训干部管理监督干部考核评价任前公示招考录用进入
+        莱芜市抓实市管领导干部党的十九大精神专题培训工作
+        为学懂弄通做实十九大精神，11月27日至12月15日，莱芜市市管领导干部党的十九大精神专题学习班在这里如期举办。专题辅导、分组学习、分组讨论、认真自学……莱芜市市管领导干部、镇（街道）党...[详情]
+        青岛市李沧区“三个三”工作法提高干部教育培训的针对性和实效性
+        高青县举办全县年轻干部培训班
+        武城县：将党校打造成干部教育培训的战斗堡垒
+        邹城市出台新规 加强干部政德教育培训质量管理
+        东明县举办全县科级干部学习贯彻党的十九大精神专题培训班
+        兰陵县对900余名科级干部进行十九大精神专题培训
+        寿光市“四式”教学法提升干部培训质量
+    </div>
+
+</div>
+</body>
+</html>

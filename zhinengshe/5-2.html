@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    #tab{width:180px;height:350px;background:#ccc;padding: 0 0px;margin:0 auto;}
+    #tab ul{float:left;margin:0px;padding:0px;}
+    #tab li{width:50px;height:50px;background:white;border:1px solid #ccc;list-style:none;float:left;margin:4px;padding:0px;}
+    #tab h2,#tab p{margin:0px;text-align: center;}
+    .active{color:red;background:black;}
+</style>
+<script>
+
+window.onload=function(){
+    var arr=[
+            '11111111',
+            '222222',
+            '3333333333',
+            '44444444444',
+            '5555555555',
+            '555666666666',
+            '7777777777777',
+            '8888888888888',
+            '9999999999999999',
+            '1010101010',
+            '十一月',
+            '12月月'
+    ]
+    var oDiv=document.getElementById("tab");
+    var aLi=oDiv.getElementsByTagName("li");
+    var oTxt=oDiv.getElementsByTagName('div')[0];
+
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index=i;
+        aLi[i].onmouseover=function(){
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className='';
+                aLi[i].style.background='white';
+            }
+            this.style.background='black';
+            this.className='active';
+//            oTxt[this.index].style.display="block";
+            oTxt.innerHTML='<h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'愉快过年了11111</p>'
+        }
+    }
+};
+</script>
+</head>
+<body>
+<div id="tab" class="calendar">
+    <ul>
+        <li><h2>1</h2><p>JAN</p></li>
+        <li><h2>2</h2><p>FER</p></li>
+        <li><h2>3</h2><p>MAR</p></li>
+        <li><h2>4</h2><p>APR</p></li>
+        <li><h2>5</h2><p>MAY</p></li>
+        <li><h2>6</h2><p>JUN</p></li>
+        <li><h2>7</h2><p>JUL</p></li>
+        <li><h2>8</h2><p>AUG</p></li>
+        <li><h2>9</h2><p>SEP</p></li>
+        <li><h2>10</h2><p>OCT</p></li>
+        <li><h2>11</h2><p>NOV</p></li>
+        <li><h2>12</h2><p>DEC</p></li>
+    </ul>
+    <div class="text">
+        <!--<h2>1月活动</h2>-->
+        <!--<p>愉快过年了11111</p>-->
+    </div>
+</div>
+
+</body>
+</html>

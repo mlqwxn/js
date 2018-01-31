@@ -1,0 +1,9 @@
+ul li{list-style: none}
+ul{padding:0;margin:0;}
+.main{background-image:url(images/title.gif);background-repeat:no-repeat;width:100px;}
+li{background-color: #eeeeee;}
+a{text-decoration: none;padding-left: 20px;display: block;width:80px;padding-top:3px;padding-bottom:3px;}
+.main a{color:white;background-image:url(images/collapsed.gif);background-repeat: no-repeat;
+    background-position: 1px center;}
+.main li a{color:black;background-image:none;}
+.main ul{display: none;}

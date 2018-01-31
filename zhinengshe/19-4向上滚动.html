@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+* {margin:0;padding:0;}
+#play{width:150px;height:100px;margin:100px auto;position:relative;}
+#play ol{left:70px;top:80px;position:absolute; list-style:none;z-index: 1000;}
+#play ol li{width:15px;height:15px;float:left;margin:1px;}
+#play .active{background:yellowgreen ;}
+/*#play ul{top:-50px;width:150px;height:100px;overflow: hidden;}*/
+#play ul li{width:150px;height:100px;overflow:hidden;list-style: none;position: relative;z-index: 500;}
+</style>
+
+<script src="js/move2.js"></script>
+<script>
+window.onload=function(){
+    var oDiv=document.getElementById("play");
+    var aBtn=oDiv.getElementsByTagName('ol')[0].getElementsByTagName('li');
+    var oUl=oDiv.getElementsByTagName('ul')[0];
+//    var aLi=oDiv.getElementsByTagName('ul')[0].getElementsByTagName('li');
+
+    for(var i=0;i<aBtn.length;i++){
+        aBtn[i].index=i;
+        aBtn[i].onclick=function(){
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].className='';
+            }
+            this.className='active';
+            oUl.style.top=-150*this.index+'px';
+        }
+    }
+}
+</script>
+</head>
+<body>
+<div class="play" id="play">
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <ul >
+        <li><a href="http://www.zhinengshe.com/"><img src="img3/1.png" alt="广告1"/></a> </li>
+        <li><a href="http://www.zhinengshe.com/"><img src="img3/2.png" alt="广告1"/></a> </li>
+        <li><a href="http://www.zhinengshe.com/"><img src="img3/3.png" alt="广告1"/></a> </li>
+        <li><a href="http://www.zhinengshe.com/"><img src="img3/4.png" alt="广告1"/></a> </li>
+        <li><a href="http://www.zhinengshe.com/"><img src="img3/5.png" alt="广告1"/></a> </li>
+    </ul>
+</div>
+
+</body>
+</html>

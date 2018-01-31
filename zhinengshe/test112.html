@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+    function Teacher(){
+        this.students=[];
+    }
+    //注册方法
+    Teacher.prototype.regist=function(obj){
+        this.students.push(obj);
+    };
+    Teacher.prototype.liuzuoye=function(content){
+        alert("老师留作业了："+content);
+        for(var i=0;i<this.students.length;i++){
+            this.students[i].listen(content);
+        }
+    };
+    // 学生类
+    function Student(teacher){
+        teacher.regist(this);
+    }
+    Student.prototype.listen=function(content){
+        this.zuoye=content;
+    };
+    //实例化
+    var kaola=new Teacher();
+    var xiaoming=new Student(kaola);
+    var xiaohong=new Student(kaola);
+    var xiaogang=new Student(kaola);
+
+
+    kaola.liuzuoye("背古诗");
+    alert(xiaoming.zuoye);
+    alert(xiaohong.zuoye);
+    alert(xiaogang.zuoye);
+
+</script>
+</head>
+<body>
+<div id="lunbo"></div>
+
+</body>
+</html>

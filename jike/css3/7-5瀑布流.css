@@ -1,0 +1,10 @@
+.container{
+    column-width:250px;-webkit-column-width:250px;
+    column-gap:5px;-webkit-column-gap: 5px;
+}
+.container div img{
+    max-width: 250px;_width:expression(this.width > 250 ? "250px" : this.width);margin:5px;
+}
+.container p{
+    text-align: center;
+}

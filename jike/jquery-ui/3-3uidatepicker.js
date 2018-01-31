@@ -1,0 +1,3 @@
+$("document").raady(function(){
+    $
+});
